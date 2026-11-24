@@ -1,0 +1,11 @@
+# 统一换行符，避免 Windows 上 checkout 后 shell 脚本带 CRLF 无法执行
+* text=auto eol=lf
+
+*.sh text eol=lf
+*.java text eol=lf
+*.xml text eol=lf
+
+*.png binary
+*.apk binary
+*.keystore binary
+*.jar binary

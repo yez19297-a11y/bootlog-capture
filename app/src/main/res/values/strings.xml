@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">开机日志记录器</string>
+
+    <string-array name="levels">
+        <item>全部（V）</item>
+        <item>调试（D）</item>
+        <item>信息（I）</item>
+        <item>警告（W）</item>
+        <item>错误（E）</item>
+    </string-array>
+    <string-array name="level_values">
+        <item>V</item>
+        <item>D</item>
+        <item>I</item>
+        <item>W</item>
+        <item>E</item>
+    </string-array>
+
+    <string-array name="max_sizes">
+        <item>4 MB / 文件</item>
+        <item>8 MB / 文件</item>
+        <item>16 MB / 文件</item>
+        <item>32 MB / 文件（推荐）</item>
+        <item>64 MB / 文件</item>
+    </string-array>
+    <string-array name="max_size_values">
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+    </string-array>
+
+    <string-array name="keep_counts">
+        <item>保留 10 个文件</item>
+        <item>保留 20 个文件</item>
+        <item>保留 50 个文件</item>
+        <item>保留 100 个文件</item>
+    </string-array>
+    <string-array name="keep_count_values">
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+</resources>
