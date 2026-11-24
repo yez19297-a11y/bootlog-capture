@@ -208,7 +208,7 @@ logcat 与 dmesg 里可能出现包名、账号片段、Wi-Fi 名称、甚至内
 ```bash
 # 需要 JDK 17+ 与 Android SDK（platform 34 + build-tools 34.0.0）
 export ANDROID_SDK_ROOT=/path/to/android-sdk
-./build.sh          # 输出 build/BootLog-v1.2.apk
+bash build.sh       # 输出 build/BootLog-v1.2.apk
 ```
 
 `build.sh` 走的是 `aapt2 compile → aapt2 link → javac → d8 → zipalign → apksigner`，全程无网络依赖，SDK 路径与 build-tools 版本自动探测。可用环境变量：

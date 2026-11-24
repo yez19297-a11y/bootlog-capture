@@ -45,9 +45,11 @@ jobs:
 
       - name: 安装 platform 与 build-tools
         run: |
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager "platforms;android-34" "build-tools;34.0.0" > /dev/null
+          SDKMANAGER="$(command -v sdkmanager || echo "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager")"
+          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          "$SDKMANAGER" "platforms;android-34" "build-tools;34.0.0"
           echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT" >> "$GITHUB_ENV"
+          ls "$ANDROID_SDK_ROOT/build-tools"
 
       # 正式签名：在仓库 Settings → Secrets and variables → Actions 里配置
       #   ANDROID_KEYSTORE_BASE64  keystore 文件的 base64（base64 -w0 bootlog.keystore）
